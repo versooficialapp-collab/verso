@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #fcf8ff; /* Tom leve de roxo/branco do seu app */
+            background-color: #fcf8ff;
             color: #333;
             line-height: 1.6;
         }
@@ -35,7 +35,7 @@
         .brand-name {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #6200EE; /* Cor principal do app */
+            color: #6200EE;
         }
 
         .btn-download-top {
@@ -53,24 +53,7 @@
             transform: scale(1.05);
         }
 
-        /* Banner Logo Retangular */
-        .hero-banner {
-            width: 100%;
-            height: auto;
-            background-color: #6200EE; /* Fundo caso a imagem falhe */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-banner img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        /* Seção de Biografia e Funções */
+        /* Seção Principal */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -81,12 +64,14 @@
             color: #6200EE;
             margin-bottom: 20px;
             text-align: center;
+            font-size: 2.2rem;
         }
 
         .bio-text {
             font-size: 1.1rem;
             text-align: justify;
             margin-bottom: 30px;
+            color: #555;
         }
 
         .features {
@@ -98,8 +83,10 @@
         }
 
         .features h2 {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #6200EE;
+            border-bottom: 2px solid #f0e6ff;
+            padding-bottom: 10px;
         }
 
         .features ul {
@@ -107,23 +94,23 @@
         }
 
         .features li {
-            margin-bottom: 12px;
-            padding-left: 25px;
+            margin-bottom: 15px;
+            padding-left: 30px;
             position: relative;
         }
 
         .features li::before {
-            content: '✓';
+            content: '✦';
             position: absolute;
             left: 0;
             color: #6200EE;
             font-weight: bold;
         }
 
-        /* Seção de Links e Botões */
+        /* Grade de Links */
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 15px;
             margin-top: 30px;
         }
@@ -132,8 +119,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
-            border-radius: 12px;
+            padding: 18px;
+            border-radius: 15px;
             text-decoration: none;
             font-weight: 600;
             transition: 0.3s;
@@ -141,28 +128,27 @@
         }
 
         /* Cores dos Botões */
-        .btn-privacy { background-color: #f0f0f0; color: #333; }
+        .btn-privacy { background-color: #ffffff; color: #333; border: 1px solid #ddd; }
         .btn-updates { background-color: #6200EE; color: white; }
         .btn-email { background-color: #ea4335; color: white; }
         .btn-telegram { background-color: #0088cc; color: white; }
         .btn-instagram { background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
 
         .btn-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 60px 20px;
             font-size: 0.9rem;
-            color: #888;
+            color: #999;
         }
 
-        /* Responsividade para Celular */
         @media (max-width: 600px) {
-            .brand-name { font-size: 1.2rem; }
-            .btn-download-top { padding: 8px 15px; font-size: 0.9rem; }
+            .bio-section h1 { font-size: 1.8rem; }
+            .brand-name { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -173,10 +159,6 @@
         <a href="#" class="btn-download-top">Baixar App</a>
     </header>
 
-    <section class="hero-banner">
-        <img src="https://via.placeholder.com/1200x400/6200EE/FFFFFF?text=VERSO+APP" alt="Verso App Logo">
-    </section>
-
     <div class="container">
         
         <section class="bio-section">
@@ -184,39 +166,35 @@
             <div class="bio-text">
                 <p>O <strong>Verso</strong> foi desenvolvido para ser mais do que um simples bloco de notas; é o seu refúgio digital para ideias, lembretes e momentos importantes. Criado com uma interface intuitiva e moderna, o app foca na experiência do usuário, permitindo que você organize sua rotina com leveza e estilo.</p>
                 <br>
-                <p>Nossa missão é oferecer uma ferramenta potente que se adapta à sua personalidade, garantindo que suas informações estejam sempre seguras e acessíveis.</p>
+                <p>Nossa missão é oferecer uma ferramenta potente que se adapta à sua personalidade, garantindo que suas informações estejam sempre seguras e acessíveis através de uma tecnologia sólida e confiável.</p>
             </div>
 
             <div class="features">
                 <h2>O que o Verso oferece?</h2>
                 <ul>
-                    <li><strong>Organização Inteligente:</strong> Crie notas dinâmicas com títulos e conteúdos detalhados.</li>
-                    <li><strong>Personalização de Perfil:</strong> Escolha avatares divertidos como capivaras, gatos e outros para deixar o app com a sua cara.</li>
-                    <li><strong>Privacidade Garantida:</strong> Integração segura com o Firebase para manter seus dados protegidos.</li>
-                    <li><strong>Interface Moderna:</strong> Design limpo, com bordas arredondadas e cores que não cansam a vista.</li>
-                    <li><strong>Busca Rápida:</strong> Encontre qualquer anotação instantaneamente com o sistema de procura integrado.</li>
-                    <li><strong>Estabilidade:</strong> Desenvolvido com lógica de programação sólida para evitar travamentos e perda de dados.</li>
+                    <li><strong>Organização Inteligente:</strong> Crie notas dinâmicas com títulos e conteúdos detalhados de forma simples.</li>
+                    <li><strong>Personalização de Perfil:</strong> Escolha avatares divertidos para deixar o app personalizado e do seu jeitinho.</li>
+                    <li><strong>Privacidade Garantida:</strong> Integração segura com o Firebase para manter seus dados sempre protegidos e privados.</li>
+                    <li><strong>Interface Moderna:</strong> Design limpo, com bordas arredondadas e cores suaves que proporcionam conforto visual.</li>
+                    <li><strong>Busca Rápida:</strong> Encontre qualquer anotação instantaneamente com o sistema de procura inteligente.</li>
+                    <li><strong>Estabilidade e Performance:</strong> Desenvolvido com foco em velocidade, evitando travamentos e garantindo fluidez.</li>
                 </ul>
             </div>
         </section>
 
-        <h2 style="text-align: center; color: #6200EE; margin-bottom: 20px;">Suporte e Comunidade</h2>
+        <h2 style="text-align: center; color: #6200EE; margin-bottom: 25px;">Suporte e Redes Sociais</h2>
         <div class="links-grid">
             <a href="https://versooficialapp-collab.github.io/politicas-verso/" class="btn-link btn-privacy">Política de Privacidade</a>
-            
             <a href="https://versooficialapp-collab.github.io/atualizacoes.verso/" class="btn-link btn-updates">Atualizações do App</a>
-            
-            <a href="mailto:versooficialapp@gmail.com" class="btn-link btn-email">Suporte por Email</a>
-            
+            <a href="mailto:versooficialapp@gmail.com" class="btn-link btn-email">Suporte por E-mail</a>
             <a href="https://t.me/fe1ipeofc" class="btn-link btn-telegram">Suporte via Telegram</a>
-            
             <a href="https://www.instagram.com/_verso_app?igsh=MzV1dmJwbnRleGox" class="btn-link btn-instagram">Siga-nos no Instagram</a>
         </div>
 
     </div>
 
     <footer>
-        &copy; 2026 Verso App - Todos os direitos reservados.
+        &copy; 2026 Verso App - Desenvolvido para inspirar sua organização.
     </footer>
 
 </body>
